@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<!-- Created By CodingLab - www.codinglabweb.com -->
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <title>2022-044 Research Website</title>
+   <!-- <title> Responsive Contact Us Form  | CodingLab </title>-->
+    <link rel="stylesheet" href="css/contactstyle.css">
+    <!-- Fontawesome CDN Link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
+    <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="css/all.css">
+
+  <!-- ------------ AOS Library ------------------------- -->
+  <link rel="stylesheet" href="css/aos.css">
+
+  <!-- Custom Style   -->
+  <link rel="stylesheet" href="css/navfooter.css">
+
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   </head>
+<body>
+  <!-- ----------------------------  navigation ---------------------------------------------- -->
+
+  <nav class="navbar">
+    <div class="navbar-menu flex-row">
+        <div class="navbar-brand">
+          <a href="#" class="text-gray"style="color: orange;">TAMIL CORRECTO+</a>
+        </div>
+        <div class="toggle-collapse">
+            <div class="toggle-icons">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+        <div>
+            <ul class="navbar-items">
+                <li class="navbar-link">
+                    <a href="Home.html">Home</a>
+                </li>
+                <li class="navbar-link">
+                    <a href="ProjectScope.html">Project Scope</a>
+                </li>
+                <li class="navbar-link">
+                    <a href="ProjectMilestones.html">Project Milestones</a>
+                </li>
+                <li class="navbar-link">
+                    <a href="Documents.html">Documents</a>
+                </li>
+                <li class="navbar-link">
+                    <a href="Presentations.html">Presentations</a>
+                </li>
+                <li class="navbar-link">
+                    <a href="AboutUs.html">About Us</a>
+                </li>
+                <li class="navbar-link">
+                    <a href="#">Contact Us</a>
+                </li>
+            </ul>
+        </div>
+        <div class="social text-gray">
+            <a href="#"><i class="fa fa-envelope"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+        </div>
+    </div>
+</nav>
+
+<!-- ------------x---------------  navigation --------------------------x------------------- -->
+  <section>
+  <div class="ccontainer">
+    <div class="content">
+      <div class="left-side">
+        <div class="address details">
+          <i class="fas fa-map-marker-alt"></i>
+          <div class="topic">Address</div>
+          <div class="text-one">SLIIT Malabe Campus</div>
+          <div class="text-two">New Kandy Road<br>Malabe<br>10115</div>
+        </div>
+        <div class="phone details">
+          <i class="fas fa-phone-alt"></i>
+          <div class="topic">Phone</div>
+          <div class="text-one">0756559396</div>
+          <div class="text-two"></div>
+        </div>
+        <div class="email details">
+          <i class="fas fa-envelope"></i>
+          <div class="topic">Email</div>
+          <div class="text-one">ginorajr@gmail.com</div>
+          
+        </div>
+      </div>
+      <div class="right-side">
+        <div class="topic-text">Send us a message</div>
+        <p>If you have any types of queries related to our research, you can send us message from here or contact us through the below details . It's our pleasure to help you.</p>
+       
+
+        <style>
+          .button input[type="submit"] {
+            background-color: #4CAF50; /* Green background */
+            color: white; /* White text color */
+            padding: 10px 20px; /* Padding inside the button */
+            border: none; /* Remove border */
+            cursor: pointer; /* Add cursor pointer on hover */
+            border-radius: 5px; /* Rounded corners */
+            font-size: 16px; /* Font size */
+          }
+          
+          .button input[type="submit"]:hover {
+            background-color: #45a049; /* Darker green background on hover */
+          }
+          </style>
+
+        <form id="contactForm" action="https://formspree.io/f/xjvnnopj" method="POST">
+          <div class="input-box">
+            <input type="text" name="name" id="name" placeholder="Enter your name" required>
+          </div>
+          <div class="input-box">
+            <input type="email" name="_replyto" id="email" placeholder="Enter your email" required>
+          </div>
+          <div class="input-box">
+            <input type="text" name="subject" id="subject" placeholder="Subject" required>
+          </div>
+          <div class="input-box">
+            <textarea name="message" id="message" placeholder="Message" required></textarea>
+          </div>
+          <div class="button">
+            <input type="submit" value="Send Now">
+          </div>
+        </form>
+        
+        <script>
+        document.getElementById("contactForm").addEventListener("submit", function(event) {
+          event.preventDefault(); // Prevent the form from submitting
+          
+          // Formspree endpoint
+          var form = event.target;
+          var url = form.action;
+          
+          // Prepare form data to submit
+          var formData = new FormData(form);
+          
+          // Submit the form asynchronously
+          fetch(url, {
+            method: "POST",
+            body: formData,
+            headers: {
+              "Accept": "application/json"
+            }
+          })
+          .then(response => {
+            if (response.ok) {
+              alert("Message sent successfully!");
+              form.reset(); // Reset the form
+            } else {
+              alert("Failed to send message. Please try again later.");
+            }
+          })
+          .catch(error => {
+            console.error("Error:", error);
+            alert("Failed to send message. Please try again later.");
+          });
+        });
+        </script>
+        
+        
+    </div>
+    </div>
+  </div>
+</section>
+<!-- --------------------------- Footer ---------------------------------------- -->
+
+<footer class="footer">
+  <div class="container">
+      <div class="about-us" data-aos="fade-right" data-aos-delay="200">
+          <h2>Informations</h2>
+          <p>Address - SLIIT Malabe Campus<br>New Kandy Road<br>Malabe<br>10115</p>
+          <p>Contact - 0756559396</p>
+          <p>Email - ginorajr@gmail.com</p>
+      </div>
+      <div class="col-lg-2 col-md-6">
+          <div class="footer_links">
+             <h2>Quick Links</h2>
+             <ul>
+                <li><a href="Home.html"><i class="fa fa-angle-right" aria-hidden="true"></i> Home</a></li>
+                <li><a href="ProjectScope.html"><i class="fa fa-angle-right" aria-hidden="true"></i> Project Scope</a></li>
+                <li><a href="ProjectMilestones.html"><i class="fa fa-angle-right" aria-hidden="true"></i> Milestones</a></li>
+                <li><a href="Presentations.html"><i class="fa fa-angle-right" aria-hidden="true"></i> Presentations</a></li>
+                <li><a href="Documents.html"><i class="fa fa-angle-right" aria-hidden="true"></i> Documents</a></li>
+                <li><a href="AboutUs.html"><i class="fa fa-angle-right" aria-hidden="true"></i> Team</a></li>
+                <li><a href="ContactUs.html"><i class="fa fa-angle-right" aria-hidden="true"></i> Contact</a></li>
+             </ul>
+          </div>
+       </div>
+       <div class="col-lg-3 col-md-6">
+          <div class="footer_links">
+             <h2>FAQ</h2>
+             <ul>
+                <li><a href="https://en.wikipedia.org/wiki/Machine_learning"><i class="fa fa-angle-right" aria-hidden="true"></i> What is Machine Learning?</a></li>
+                
+                <li><a href="https://en.wikipedia.org/wiki/Natural_language_processing"><i class="fa fa-angle-right" aria-hidden="true"></i> What is Natural Language Processing</a></li>
+                <li><a href="https://en.wikipedia.org/wiki/Artificial_intelligence"><i class="fa fa-angle-right" aria-hidden="true"></i> What is Artificial Intelligence</a></li>
+             </ul>
+          </div>
+       </div>
+      <div class="follow" data-aos="fade-left" data-aos-delay="200">
+          <h2>Follow Us</h2>
+          <p>Let us be Social</p>
+          <div>
+              <i class="fab fa-facebook-f"></i>
+              <i class="fab fa-twitter"></i>
+              <i class="fab fa-instagram"></i>
+              <i class="fab fa-youtube"></i>
+          </div>
+      </div>
+  </div>
+  <div class="rights flex-row">
+      <h4 class="text-gray">
+          Copyright ©2024 All rights reserved | made by <a href="https://www.sliit.lk/">CDAP 2023-24-062</a>
+          </a>
+      </h4>
+  </div>
+ 
+</footer>
+
+<!-- -------------x------------- Footer --------------------x------------------- -->
+
+<!-- Jquery Library file -->
+<script src="js/Jquery3.4.1.min.js"></script>
+
+<!-- --------- Owl-Carousel js ------------------->
+<script src="js/owl.carousel.min.js"></script>
+
+<!-- ------------ AOS js Library  ------------------------- -->
+<script src="js/aos.js"></script>
+
+<!-- Custom Javascript file -->
+<script src="js/main.js"></script>
+</body>
+
+</html>
